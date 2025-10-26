@@ -1,0 +1,112 @@
+/* src/Components/ResendVerification.css */
+
+.auth-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: var(--space-32);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-container h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-24);
+  text-align: center;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.auth-container input[type="email"]:focus,
+.auth-container input[type="password"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
+.auth-container input[type="email"]::placeholder,
+.auth-container input[type="password"]::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.auth-container button[type="submit"] {
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-btn-primary-text);
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: background-color var(--duration-normal) var(--ease-standard);
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.auth-container button[type="submit"]:active {
+  background-color: var(--color-primary-active);
+}
+
+.auth-container button[type="submit"]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.auth-container p {
+  padding: var(--space-10) var(--space-12);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  margin: 0;
+}
+
+.auth-container p[style*="color:red"],
+.auth-container p[style*="color: red"] {
+  color: var(--color-error) !important;
+  background-color: rgba(var(--color-error-rgb), 0.1);
+  border: 1px solid rgba(var(--color-error-rgb), 0.25);
+}
+
+.auth-container p[style*="color:green"],
+.auth-container p[style*="color: green"] {
+  color: var(--color-success) !important;
+  background-color: rgba(var(--color-success-rgb), 0.1);
+  border: 1px solid rgba(var(--color-success-rgb), 0.25);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-container {
+    margin: var(--space-32) var(--space-16);
+    padding: var(--space-24);
+  }
+
+  .auth-container h2 {
+    font-size: var(--font-size-2xl);
+  }
+}

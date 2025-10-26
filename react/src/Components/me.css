@@ -1,0 +1,13 @@
+.me-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px 0;
+}
+
+.me-message {
+  background-color: #dcf8c6;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 70%;
+  border: 1px solid #b7e8a7;
+}

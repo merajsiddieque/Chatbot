@@ -1,0 +1,13 @@
+.chatbot-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8px 0;
+}
+
+.chatbot-message {
+  background-color: #e9f3ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 70%;
+  border: 1px solid #cce0ff;
+}

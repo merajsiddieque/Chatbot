@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+.main-content {
+  flex: 1;               /* takes remaining space between header & footer */
+  margin-top: 60px;      /* height of your fixed header */
+  padding: 20px;         /* optional spacing */
+  background-color: #f0f0f0; /* optional, makes text visible */
+  color: #000;           /* ensure text is readable */
+}
+
+/* App.css */
+.app {
+  transition: transform 0.3s ease;
+}
+
+.app.shift-right {
+  transform: translateX(220px); /* same width as sidebar */
+}
+
+/* Sidebar pushes everything by width: 220px */
+.app-content {
+  transition: transform 0.3s ease;
+}
+
+.app-content.shift {
+  transform: translateX(220px);
+}

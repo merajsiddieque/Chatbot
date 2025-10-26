@@ -1,0 +1,108 @@
+/* === YOUR ORIGINAL STYLES === */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.divheader {
+  height: 60px;
+  width: 100%;
+  background-color: #1ba6f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Added z-index to keep header on top */
+}
+
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  flex: 1;
+  justify-content: center;
+}
+
+.left {
+  justify-content: flex-start;
+  cursor: pointer; /* Moved cursor:pointer to the whole div */
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* === MODIFIED IMAGE STYLES === */
+/* Specific style for your logo */
+.header-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border: 2px solid #1ba6f7;
+  border-radius: 50%;
+}
+
+/* Style for your profile image */
+.header-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  cursor: pointer; /* Added cursor:pointer to show it's clickable */
+}
+
+
+/* === NEW DROPDOWN STYLES === */
+/* Container to position the dropdown correctly */
+.profile-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The dropdown menu itself */
+.dropdown-menu {
+  position: absolute;
+  top: 50px; /* Position it below the image (40px height + 10px margin) */
+  right: 0; /* Align to the right */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  z-index: 1001; /* Ensure it's above the header */
+  overflow: hidden;
+}
+
+/* Style for the list inside the dropdown */
+.dropdown-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the links (a) inside the dropdown */
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Change background on hover for visual feedback */
+.dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+}

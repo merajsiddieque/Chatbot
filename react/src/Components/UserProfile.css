@@ -1,0 +1,124 @@
+.profile-container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.profile-title {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+/* Profile Image */
+.profile-image-section {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.image-upload-btn {
+  margin-top: 10px;
+  background-color: #1a73e8;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-upload-btn:hover {
+  background-color: #155abb;
+}
+
+/* Form Controls */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.3);
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Button */
+.submit-button {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #155abb;
+}

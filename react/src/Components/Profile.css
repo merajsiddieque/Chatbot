@@ -1,0 +1,81 @@
+/* Dropdown positioning and base style */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 160px;
+  z-index: 999;
+  overflow: hidden;
+  padding: 6px 0;
+}
+
+/* Reset list spacing */
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each list item */
+.dropdown-menu li {
+  width: 100%;
+}
+
+/* Common dropdown link styles */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.4;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover and active style */
+.dropdown-item:hover {
+  background-color: #f2f5fa;
+  color: #0072ff;
+}
+
+/* Ensure the <span> and <Link> behave identically */
+.dropdown-menu li span,
+.dropdown-menu li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-menu li span:hover,
+.dropdown-menu li a:hover {
+  background-color: #f2f5fa;
+  color: #0072ff;
+}
+
+/* Optional: subtle divider between items */
+.dropdown-menu li + li {
+  border-top: 1px solid #ececec;
+}
+
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s ease;
+}
+.dropdown-menu li a:hover,
+.dropdown-menu li span:hover {
+  background: rgba(0, 114, 255, 0.05);
+}

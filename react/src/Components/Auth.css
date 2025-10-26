@@ -1,0 +1,177 @@
+/* Fullscreen overlay background */
+.main-auth-container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(26, 115, 232, 0.7), rgba(0, 198, 255, 0.6)) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* Frosted glass form inside main container */
+.main-auth-container .auth-container {
+  width: 380px;
+  max-width: 90%;
+  border-radius: 14px;
+  padding: 40px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Smooth animation on entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title text */
+.main-auth-container .auth-container h2 {
+  font-size: 2rem !important;
+  margin-bottom: 20px;
+  color: #fff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+/* Form styling */
+.main-auth-container .auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.main-auth-container .auth-container input {
+  width: 100% !important;
+  padding: 12px !important;
+  margin-bottom: 14px;
+  border-radius: 8px !important;
+  border: none !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.main-auth-container .auth-container input::placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.main-auth-container .auth-container input:focus {
+  outline: none !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Submit button */
+.main-auth-container .auth-container button[type="submit"] {
+  width: 100% !important;
+  padding: 12px !important;
+  background: linear-gradient(90deg, #00c6ff, #0072ff) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-auth-container .auth-container button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.4) !important;
+}
+
+.main-auth-container .auth-container button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Error message styling */
+.main-auth-container .auth-container .error-message {
+  background: rgba(255, 59, 48, 0.3) !important;
+  border: 1px solid rgba(255, 59, 48, 0.5) !important;
+  color: #fff !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Success message styling */
+.main-auth-container .auth-container .success-message {
+  background: rgba(52, 199, 89, 0.3) !important;
+  border: 1px solid rgba(52, 199, 89, 0.5) !important;
+  color: #fff !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Switch link (Already have account / Don't have account) */
+.main-auth-container .auth-container .switch-link {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.main-auth-container .auth-container .switch-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+/* Forgot password link */
+.main-auth-container .auth-container .forgot-password-link {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.main-auth-container .auth-container .forgot-password-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+/* General paragraph reset for auth-container */
+.main-auth-container .auth-container p {
+  margin: 0;
+  color: #fff !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .main-auth-container .auth-container {
+    width: 85%;
+    padding: 30px 20px;
+  }
+
+  .main-auth-container .auth-container h2 {
+    font-size: 1.6rem !important;
+  }
+}
