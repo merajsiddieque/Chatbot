@@ -1,7 +1,7 @@
 // Body.jsx
 import React from "react";
 import "./Body.css";
-import Me from "./me";
+import Me from "./Me";
 import Chatbot from "./chatbot";
 
 function Body({ messages }) {

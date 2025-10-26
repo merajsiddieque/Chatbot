@@ -1,8 +1,8 @@
 // Chatbot.jsx
 import React from "react";
-import "./chatbot.css";
+import "./Chatbot.css";
 
-function chatbot({ text }) {
+function Chatbot({ text }) {
   return (
     <div className="chatbot-container">
       <div className="chatbot-message">{text}</div>
@@ -10,4 +10,4 @@ function chatbot({ text }) {
   );
 }
 
-export default chatbot;
+export default Chatbot;

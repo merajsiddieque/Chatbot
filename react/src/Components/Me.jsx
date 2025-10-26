@@ -1,5 +1,5 @@
 import React from "react";
-import "./me.css";
+import "./Me.css";
 
 function Me({ text }) {
   return (
