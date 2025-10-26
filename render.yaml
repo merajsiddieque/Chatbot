@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Mental Health Chatbot
+    name: mental-health-chatbot
     env: python
     plan: free
     buildCommand: |
@@ -11,4 +11,3 @@ services:
       pip install -r requirements.txt
     startCommand: gunicorn app:app
     rootDir: flask
-    
