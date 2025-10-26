@@ -4,10 +4,6 @@ services:
     env: python
     plan: free
     buildCommand: |
-      cd react
-      npm install
-      npm run build
-      cd ..
       mkdir -p flask/dist
       cp -r react/dist/* flask/dist/
       cd flask
