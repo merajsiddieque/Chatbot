@@ -3,10 +3,13 @@ services:
     name: mental-health-chatbot
     env: python
     plan: free
+    # All build commands are relative to 'rootDir'
     buildCommand: |
-      mkdir -p flask/dist
-      cp -r react/dist/* flask/dist/
-      cd flask
+      cd ../react
+      npm install
+      npm run build
+      cd ../flask
       pip install -r requirements.txt
     startCommand: gunicorn app:app
+    # This is correct. It makes 'gunicorn app:app' work.
     rootDir: flask
