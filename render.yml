@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: flask-react-chat
+    env: python
+    plan: free
+    buildCommand: |
+      cd react
+      npm install
+      npm run build
+      cd ../flask
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    rootDir: flask
+    
