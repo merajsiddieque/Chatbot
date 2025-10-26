@@ -7,7 +7,10 @@ services:
       cd react
       npm install
       npm run build
-      cd ../flask
+      cd ..
+      mkdir -p flask/dist
+      cp -r react/dist/* flask/dist/
+      cd flask
       pip install -r requirements.txt
     startCommand: gunicorn app:app
     rootDir: flask
