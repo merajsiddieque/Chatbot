@@ -2,7 +2,7 @@
 import React from "react";
 import "./Body.css";
 import Me from "./Me";
-import Chatbot from "./chatbot";
+import Chatbot from "./Chatbot";
 
 function Body({ messages }) {
   return (
