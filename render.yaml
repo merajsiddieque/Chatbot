@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: flask-react-chat
+    name: Mental Health Chatbot
     env: python
     plan: free
     buildCommand: |
