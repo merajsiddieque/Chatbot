@@ -10,4 +10,3 @@ services:
       cd ../flask
       pip install -r requirements.txt
     startCommand: gunicorn app:app
-    rootDir: flask
