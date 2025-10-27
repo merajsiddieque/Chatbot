@@ -38,7 +38,7 @@ function Auth({ onAuthSuccess }) {
 
         // Create Firestore docs
         await setDoc(doc(db, "Profile", email), { name: "", email });
-        await setDoc(doc(db, "Chat", email), { messages: [] });
+        await setDoc(doc(db, "Chats", email), { messages: [] });
 
         setTimeout(() => {
           setIsSignUp(false);
