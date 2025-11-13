@@ -1,0 +1,49 @@
+# render.yaml
+# 🚀 Render Blueprint for Chatbot App (React + Node.js)
+
+services:
+  # === Backend API Service ===
+  - type: web
+    name: chatbot-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: |
+      cd backend
+      npm install
+    startCommand: |
+      cd backend
+      npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      # Example: add your own keys if needed
+      # - key: OPENAI_API_KEY
+      #   sync: false
+
+  # === Frontend (React + Vite) ===
+  - type: web
+    name: chatbot-frontend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: |
+      cd react
+      npm install
+      npm run build
+    startCommand: |
+      cd react
+      npm run dev
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_API_URL
+        # 👇 Update this after backend deploy
+        value: https://chatbot-backend.onrender.com
+    staticPublishPath: react/dist
+
+# === Metadata ===
+version: "1"
+name: chatbot
